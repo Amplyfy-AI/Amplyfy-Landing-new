@@ -140,46 +140,58 @@ function EcosystemSection() {
 };
 
 function KeyPoints() {
+  const items = [
+    {
+      icon: <BsLightning />,
+      title: "10X more personal than any AI you've used",
+      description:
+        "Our proprietary learning algorithm adapts to your unique style, preferences, and goals faster than generic AI solutions.",
+    },
+    {
+      icon: <GrPowerCycle />,
+      title: "70% less time spent on planning, posting, or writing",
+      description:
+        "Reclaim your creative time by automating repetitive tasks while maintaining your authentic voice.",
+    },
+    {
+      icon: <LuRocket />,
+      title: "12X faster growth for consistent creators",
+      description:
+        "Musicians using Amplyf see dramatically accelerated audience growth and engagement across platforms.",
+    },
+    {
+      icon: <CgLockUnlock />,
+      title: "Access to networks via AmpMap",
+      description:
+        "Connect with industry professionals who are specifically looking for your style and sound.",
+    },
+    {
+      icon: <LuAtom />,
+      title: "Adaptive AI that evolves with you",
+      description:
+        "As your music and career develop, Amplyf grows with you, constantly optimizing its assistance.",
+    },
+  ];
+
   return (
-    <section className="bg-black text-white py-16 lg:px-60 md:px-40 text-center justify-center items-center overflow-hidden">
-      <h2 className="text-4xl font-bold mb-10">Built Different. Feels Personal. Works Fast.</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto text-center md:text-left justify-center items-center ">
-        {[
-          {
-            icon: <BsLightning/>,
-            title: "10X more personal than any AI you've used",
-            description:
-              "Our proprietary learning algorithm adapts to your unique style, preferences, and goals faster than generic AI solutions.",
-          },
-          {
-            icon: <GrPowerCycle/>,
-            title: "70% less time spent on planning, posting, or writing",
-            description:
-              "Reclaim your creative time by automating repetitive tasks while maintaining your authentic voice.",
-          },
-          {
-            icon: <LuRocket/>,
-            title: "12X faster growth for consistent creators",
-            description:
-              "Musicians using Amplyf see dramatically accelerated audience growth and engagement across platforms.",
-          },
-          {
-            icon: <CgLockUnlock/>,
-            title: "Access to networks via AmpMap",
-            description:
-              "Connect with industry professionals who are specifically looking for your style and sound.",
-          },
-          {
-            icon: <LuAtom/>,
-            title: "Adaptive AI that evolves with you",
-            description:
-              "As your music and career develop, Amplyf grows with you, constantly optimizing its assistance.",
-          },
-        ].map((item, i) => (
-          <div key={i} className="flex items-start space-x-4 justify-center items-center">
+    <section className="bg-black text-white py-16 px-4 md:px-20 lg:px-60">
+      <h2 className="text-4xl font-bold mb-12 text-center">
+        Built Different. Feels Personal. Works Fast.
+      </h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+        {items.map((item, i) => (
+          <div
+            key={i}
+            className={`flex gap-4 ${
+              i === items.length - 1
+                ? 'md:col-span-2 justify-center text-center md:text-center'
+                : 'text-left'
+            }`}
+          >
             <div className="text-3xl">{item.icon}</div>
-            <div>
-              <h3 className="text-lg mb-1">{item.title}</h3>
+            <div className="max-w-md">
+              <h3 className="text-lg font-medium mb-1">{item.title}</h3>
               <p className="text-sm text-gray-400">{item.description}</p>
             </div>
           </div>
@@ -209,7 +221,7 @@ function SmallText() {
 
 function Pricing() {
   return(
-    <section className="flex flex-col items-center justify-center py-20 lg:px-70 md:px-10 text-center bg-radial from-sky-900 to-black overflow-hidden">
+    <section className="flex flex-col items-center justify-center py-20 lg:px-64.5 md:px-10 text-center bg-radial from-sky-900 to-black overflow-hidden">
       <div className="flex flex-col md:flex-row gap-6 max-w-6xl w-full justify-center items-center">
 
         <div className="rounded-3xl border border-gray-600 p-8 text-white flex flex-col items-center w-full max-w-md bg-black">
