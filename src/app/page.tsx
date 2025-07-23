@@ -21,11 +21,11 @@ function Header() {
         <Image
           src={'/Amplyfy.png'}
           alt={'Amplyfy'}
-          width={70}
-          height={70}
+          width={52}
+          height={52}
         />
       </div>
-      <div className="flex flex-col items-center gap-6 w-full px-4 md:px-8">
+      <div className="flex flex-col justify-center items-center gap-6 w-full px-4 md:px-8 h-full">
         <div className="flex justify-center border border-white/15 rounded-full px-6 py-3 space-x-6">
           <div className="flex items-center text-sm font-medium text-white/60 space-x-1">
             <span>Page</span>
@@ -75,13 +75,13 @@ function Homepage() {
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-6 w-full">
-            <button className="bg-white border-gray-500 text-black font-medium px-6 py-3 rounded-lg hover:bg-gray-200 transition">
-                Get Started
-            </button>
-            <button className="border border-gray-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition">
-                Explore Features
-            </button>
-            </div>
+                <button className="bg-white text-black text-sm font-medium px-6 py-4 rounded-lg hover:opacity-75 transition cursor-pointer">
+                    Get Started
+                </button>
+                <button className="border border-gray-500 text-white text-sm px-4 py-2 rounded-lg hover:opacity-75 transition cursor-pointer">
+                    Explore Features
+                </button>
+                </div>
             <div className="flex flex-col items-center mt-20">
                 <Image src={"/page1.png"} alt="Image" width="1000" height="150"/>
             </div>
@@ -183,7 +183,7 @@ function EcosystemSection() {
                 <span className="text-xl">{item.Icon}</span>
                 <h3 className="font-semibold">{item.title}</h3>
               </div>
-              <p className="text-sm text-gray-400">{item.description}</p>
+              <p className="text-left text-sm text-gray-400">{item.description}</p>
             </div>
           ))}
         </div>
@@ -244,8 +244,8 @@ function KeyPoints() {
           >
             <div className="text-3xl">{item.icon}</div>
             <div className="max-w-md">
-              <h3 className="text-lg font-medium mb-1">{item.title}</h3>
-              <p className="text-sm text-gray-400">{item.description}</p>
+              <h3 className="text-lg text-left font-medium mb-1">{item.title}</h3>
+              <p className="text-sm text-left text-gray-400">{item.description}</p>
             </div>
           </div>
         ))}
@@ -351,7 +351,7 @@ function Email() {
           <input
             type="email"
             placeholder="Your email"
-            className="px-4 py-2 rounded-md w-full sm:w-64 text-gray outline-gray text-center" 
+            className="px-4 py-2 rounded-md w-full sm:w-64 text-gray border border-gray-700 text-center" 
           />
           <button className="bg-white text-black px-6 py-2 rounded-md font-medium hover:bg-gray-200 transition w-full sm:w-auto"> 
             Join waitlist
