@@ -16,7 +16,7 @@ import { PiSparkle } from "react-icons/pi";
 
 function Header() {
   return (
-    <div className={'w-full grid py-2 grid-cols-1 md:grid-cols-3 border-b border-b-white/15 text-center'}>
+    <div className={'w-full grid py-2 grid-cols-1 md:grid-cols-3 border-b border-b-white/15 text-center flex-col md:flex-row'}>
       <div className={'flex justify-center items-center w-full'}>
         <Image
           src={'/Amplyfy.png'}
@@ -61,35 +61,88 @@ function Header() {
 
 function Homepage() {
   return(
-    <section className="min-h-screen text-white py-16 lg:px-60 md:px-20 text-center bg-radial from-sky-900 to-black">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl sm:text-5xl font-bold leading-tight px-40 md:px-20">Your AI-Powered <br/>
-          <span className="text-transparent bg-clip-text bg-gradient-to-b from-blue-200 to-sky-700">
-            Music Companion
-          </span>
-        </h1>
+    <section className="text-white py-16 lg:px-60 md:px-20 text-center bg-radial from-sky-900 to-black flex-col md:flex-row w-full">
+        <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl sm:text-5xl font-bold leading-tight px-40 md:px-20">Your AI-Powered <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-blue-200 to-sky-700">
+                Music Companion
+            </span>
+            </h1>
 
-        <p className="mt-6 text-lg text-gray-400">
-          Amplyfy adapts to you, helping you grow, connect, and <br />
-          automate your creative journey.
-        </p>
+            <p className="mt-6 text-lg text-gray-400">
+            Amplyfy adapts to you, helping you grow, connect, and <br />
+            automate your creative journey.
+            </p>
 
-        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-6">
-          <button className="bg-white border-gray-500 text-black font-medium px-6 py-3 rounded-lg hover:bg-gray-200 transition">
-            Get Started
-          </button>
-          <button className="border border-gray-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition">
-            Explore Features
-          </button>
+            <div className="mt-10 flex flex-col sm:flex-row justify-center gap-6 w-full">
+            <button className="bg-white border-gray-500 text-black font-medium px-6 py-3 rounded-lg hover:bg-gray-200 transition">
+                Get Started
+            </button>
+            <button className="border border-gray-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition">
+                Explore Features
+            </button>
+            </div>
+            <div className="flex flex-col items-center mt-20">
+                <Image src={"/page1.png"} alt="Image" width="1000" height="150"/>
+            </div>
+            <h4 className="text-3xl sm:text-4xl mt-20 text-center">Meet the Most Personalized AI Ever <br/> Built for Music Creators</h4>
         </div>
-        <div className="flex flex-col items-center mt-20">
-            <Image src={"/page1.png"} alt="Image" width="1000" height="150"/>
+    </section>
+  );
+};
+
+function AmplyfyFeatures1() {
+  return (
+    <section className="bg-black text-white py-12 px-6 md:px-16 w-full">
+      <div className="flex flex-col md:flex-row justify-center items-center md:gap-16">
+        <div className="flex flex-col items-center text-center max-w-xs">
+          <Image
+            src="/ring.png"
+            alt="Dashboard UI"
+            width={250}
+            height={250}
+            className="mb-4"
+          />
+          <p className="text-base md:text-lg">Learns and grows with you</p>
         </div>
-        <h4 className="text-3xl sm:text-4xl mt-20 text-center">Meet the Most Personalized AI Ever <br/> Built for Music Creators</h4>
-        <div className="flex flex-col items-center mt-8 gap-8">
-            <Image src={"/Bento1.png"} alt="Image" width="1000" height="150"/>
-            <br/><br/>
-            <Image src={"/Bento2.png"} alt="Image" width="1000" height="150"/>
+
+        <div className="flex flex-col items-center text-center max-w-sm">
+          <Image
+            src="/bento2.png" 
+            alt="cone"
+            width={620}
+            height={400}
+            className="mb-4"
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+function AmplyfyFeatures2() {
+  return (
+    <section className="bg-black text-white py-12 px-6 md:px-16 w-full">
+      <div className="flex flex-col md:flex-row justify-center items-center md:gap-16">
+        <div className="flex flex-col items-center text-center max-w-xs">
+          <Image
+            src="/Visual.png"
+            alt="Dashboard UI"
+            width={620}
+            height={400}
+            className="mb-1"
+          />
+        </div>
+
+        <div className="flex flex-col items-center text-center max-w-sm">
+          <Image
+            src="/cone.png" 
+            alt="cone"
+            width={250}
+            height={250}
+            className="mb-1"
+          />
+          <p className="text-base md:text-lg">Automates tasks like posting, planning, writing, and more</p>
         </div>
       </div>
     </section>
@@ -98,7 +151,7 @@ function Homepage() {
 
 function EcosystemSection() {
   return(
-    <section className=" bg-linear-to-r from-[#0a1a1c] to-black text-white py-16 px-4 md:px-20 text-center overflow-hidden">
+    <section className=" bg-linear-to-r from-[#0a1a1c] to-black text-white py-16 px-4 md:px-20 text-center flex-col md:flex-row overflow-hidden">
       <div className="max-x-6xl mx-auto">
         <h2 className="text-3xl sm:text-4xl mb-12">
           One Ecosystem, Built <br/> for Music Creators 
@@ -174,7 +227,7 @@ function KeyPoints() {
   ];
 
   return (
-    <section className="bg-black text-white py-16 px-4 md:px-20 lg:px-60">
+    <section className="bg-black text-white py-16 px-4 md:px-20 lg:px-60 flex-col md:flex-row">
       <h2 className="text-4xl font-bold mb-12 text-center">
         Built Different. Feels Personal. Works Fast.
       </h2>
@@ -203,8 +256,8 @@ function KeyPoints() {
 
 function SmallText() {
   return(
-    <section className="container mx-auto">
-      <div className="bg-black text-center px-4 md:px-20">
+    <section className="bg-black container mx-auto flex-col md:flex-row ">
+      <div className="text-center px-4 md:px-20">
         <h1 className="text-white text-4xl sm:text-5xl font-bold leading-tight mb-6">
         Simple Pricing. No Surprises.
         </h1>
@@ -221,7 +274,7 @@ function SmallText() {
 
 function Pricing() {
   return(
-    <section className="flex flex-col items-center justify-center py-20 lg:px-64.5 md:px-10 text-center bg-radial from-sky-900 to-black overflow-hidden">
+    <section className="flex flex-col items-center justify-center py-20 lg:px-64.5 md:px-10 text-center bg-radial from-sky-900 to-black overflow-hidden flex-col md:flex-row">
       <div className="flex flex-col md:flex-row gap-6 max-w-6xl w-full justify-center items-center">
 
         <div className="rounded-3xl border border-gray-600 p-8 text-white flex flex-col items-center w-full max-w-md bg-black">
@@ -289,12 +342,12 @@ function Pricing() {
 
 function Email() {
   return(
-    <section className=" bg-gradient-to-b from-sky-900 to-black flex items-center justify-center lg:px-107 md:px-20 text-center overflow-hidden">
-      <div className="text-center max-w-2xl w-full mt-15">
-        <h1 className="text-white text-3xl sm:text-5xl font-bold leading-tight mb-6">
+    <section className=" bg-gradient-to-b from-sky-900 to-black flex items-center justify-center lg:px-107 px-20 text-center overflow-hidden flex-col md:flex-row">
+      <div className="text-center max-w-2xl flex flex-col items-center">
+        <h1 className="text-white text-3xl sm:text-5xl font-bold leading-tight mb-6 mt-6">
           Level Up Your Music <br /> Career Today
         </h1>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4 w-full">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4 w-full ">
           <input
             type="email"
             placeholder="Your email"
@@ -315,7 +368,7 @@ function Email() {
 function Footer() {
   return(
     <>
-      <div className="bg-black flex flex-col md:flex-row justify-center items-center px-4 md:px-20 py-12 gap-10 text-center overflow-hidden">
+      <div className="bg-black flex flex-col md:flex-row justify-center items-center md:px-20 py-12 gap-10 text-center overflow-hidden flex-col md:flex-row">
         <div className="flex flex-col">
           <div className={"text-white px-35 py-20 flex justify-end items-center"}>
             <div className={"max-w-7xl mx-auto grid grid-cols-5 gap-8"}>
@@ -386,19 +439,22 @@ function Footer() {
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col justify-start items-start px-24">
+    <div className="flex flex-col items-start w-full">
       
       <Header/>
       <Homepage/>
-      <EcosystemSection/>
-      <KeyPoints/>
+      <AmplyfyFeatures1/>
+      <AmplyfyFeatures2/>
+      <div className="items-start w-full">
+        <EcosystemSection/>
+        <KeyPoints/>
 
-      <SmallText/>
-      <Pricing/>
-
-      <Email/>
-      <Footer/>
+        <SmallText/>
+        <Pricing/>
       
+        <Email/>
+        <Footer/>
+        </div>
       
 
     </div>
